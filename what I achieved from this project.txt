@@ -1,0 +1,2 @@
+practiced swing gui (cardLayout, event dispatch thread, actionListeners, inheritance in swing)
+prcaticed MVC(Model-View-Control) Project Architecture
