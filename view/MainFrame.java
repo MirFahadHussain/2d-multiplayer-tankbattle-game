@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import control.HostJoinControl;
 
 import java.awt.*; 
 
@@ -20,7 +21,7 @@ public class MainFrame extends JFrame{
     private JButton hostButton = new JButton("Host");
     private JButton joinButton = new JButton("Join");
 
-    
+    private HostJoinControl hostJoinControl;
     
 
     public MainFrame(){
@@ -67,6 +68,9 @@ public class MainFrame extends JFrame{
 
         joinButton.setBounds(430, 210, 150, 25);
         MainPanel.add(joinButton);
+
+        hostJoinControl = new HostJoinControl(this);
+        hostJoinControl.initialize();
 
         return MainPanel;
     }
