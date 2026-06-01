@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
 import control.HostJoinControl;
 
 import java.awt.*; 
@@ -21,7 +22,9 @@ public class MainFrame extends JFrame{
     private JButton hostButton = new JButton("Host");
     private JButton joinButton = new JButton("Join");
 
+    
     private HostJoinControl hostJoinControl;
+    WaitingPanel waitingPanel;
     
 
     public MainFrame(){
@@ -83,6 +86,10 @@ public class MainFrame extends JFrame{
         return ipField.getText();
     }
 
+    public void setIpAddress(String ipAdress) {
+        ipField.setText(ipAdress);
+    }
+
     public void setIPAddress(String ipAddress) {
         ipField.setText(ipAddress);
     }
@@ -93,5 +100,13 @@ public class MainFrame extends JFrame{
 
     public JButton getJoinButton() {
         return joinButton;
+    }
+
+    public JPanel getCards() {
+        return cards;
+    }
+
+    public CardLayout getCardLayout() {
+        return cardLayout;
     }
 }
